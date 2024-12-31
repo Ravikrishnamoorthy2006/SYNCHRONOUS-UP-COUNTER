@@ -1,5 +1,9 @@
 ### SYNCHRONOUS-UP-COUNTER
 
+Name : Ravikrishnamoorthy.D
+
+Reg no : 212224040271
+
 **AIM:**
 
 To implement 4 bit synchronous up counter and validate functionality.
@@ -30,17 +34,66 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 /* write all the steps invloved */
 
+1.Type the Verilog program in Quartus Prime to implement the 4-bit synchronous up counter.
+
+2.Compile and run the program to ensure there are no syntax or logical errors.
+
+3.Generate the RTL schematic to visualize the structure of the synchronous counter and verify the design logic.
+
+4.Create nodes for the clock (CLK), reset, and counter outputs (Q3, Q2, Q1, Q0) to observe the counting process.
+
+5.Simulate the design for multiple clock cycles and observe the timing diagrams to confirm that the counter increments its value synchronously at each clock pulse.
+
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:
+module counter (out, clk,rst);
+
+input clk,rst; 
+
+output reg [3:0]out;
+
+always @ (posedge clk)
+
+
+begin
+   
+    
+    if (rst)
+     
+      out<=0;
+   
+    else
+     
+      out <= out+1;
+
+end
+
+endmodule 
+
+
+Developed by: Ravikrishnamoorthy.D 
+
+RegisterNumber: 212224040271
+
 */
 
 **RTL LOGIC UP COUNTER**
 
+![Screenshot 2024-12-31 232531](https://github.com/user-attachments/assets/7548ad92-9484-4109-9f41-b138433b47f5)
+
+
 **TIMING DIAGRAM FOR IP COUNTER**
+
+![Screenshot 2024-12-31 232508](https://github.com/user-attachments/assets/584b41bb-208d-4398-bb05-68876e3ea0a9)
+
 
 **TRUTH TABLE**
 
+![Screenshot 2024-12-31 232804](https://github.com/user-attachments/assets/2c7fc1e0-5e67-443d-8f4c-92a752aafd48)
+
+
 **RESULTS**
+
+Thus, the 4-bit synchronous up counter was successfully implemented, and its functionality was validated through simulation. The counter incremented correctly with each clock pulse, as verified by the truth table and timing diagrams
